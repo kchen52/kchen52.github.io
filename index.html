@@ -1,1 +1,185 @@
-Hello World!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="lul">
+  <meta name="author" content="sca123">
+  <link rel="icon" href="images/folder295.ico">
+
+  <title>Kevin Chen's Portfolio</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/cover.css" rel="stylesheet">
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+
+  <!-- handles the fading in/out of each page -->
+  <!-- TODO: move this shit to its own js file -->
+  <script>
+  $(document).ready(function() {
+   $(".projectsPageContent").hide();
+   $(".contactPageContent").hide();
+   $(".homePageContent").show();
+
+
+   var delay = 1;
+   $(".projectsNav").click(function() {
+    $(".homePageContent").hide(delay);
+    $(".contactPageContent").hide(delay); 
+    $(".projectsPageContent").show(delay); 
+    startAnimation();
+    document.getElementById("homeNavList").className="";
+    document.getElementById("projectsNavList").className="active";
+    document.getElementById("contactNavList").className="";
+
+    function startAnimation() {
+      $(".homePageContent").animate({opacity: 0}, "fast");
+      $(".contactPageContent").animate({opacity: 0}, "fast");
+      $(".projectsPageContent").animate({opacity: 1}, "fast");
+    }
+
+  });
+
+   $(".homeNav").click(function() {
+    $(".homePageContent").show(delay);
+    $(".contactPageContent").hide(delay); 
+    $(".projectsPageContent").hide(delay); 
+    document.getElementById("homeNavList").className="active";
+    document.getElementById("projectsNavList").className="";
+    document.getElementById("contactNavList").className="";
+    startAnimation();
+
+    function startAnimation() {
+      $(".homePageContent").animate({opacity: 1}, "fast");
+      $(".contactPageContent").animate({opacity: 0}, "fast");
+      $(".projectsPageContent").animate({opacity: 0}, "fast");
+    }
+
+  });
+
+   $(".contactNav").click(function() {
+    $(".homePageContent").hide(delay);
+    $(".contactPageContent").show(delay); 
+    $(".projectsPageContent").hide(delay); 
+    document.getElementById("homeNavList").className="";
+    document.getElementById("projectsNavList").className="";
+    document.getElementById("contactNavList").className="active";
+    startAnimation();
+    function startAnimation() {
+      $(".homePageContent").animate({opacity: 0}, "fast");
+      $(".contactPageContent").animate({opacity: 1}, "fast");
+      $(".projectsPageContent").animate({opacity: 0}, "fast");
+    }
+
+  });
+
+   $(".goToProjects").click(function() {
+    $(".homePageContent").hide(delay);
+    $(".contactPageContent").hide(delay); 
+    $(".projectsPageContent").show(delay); 
+    document.getElementById("homeNavList").className="";
+    document.getElementById("projectsNavList").className="active";
+    document.getElementById("contactNavList").className="";
+    startAnimation();
+    function startAnimation() {
+      $(".homePageContent").animate({opacity: 0}, "fast");
+      $(".contactPageContent").animate({opacity: 0}, "fast");
+      $(".projectsPageContent").animate({opacity: 1}, "fast");
+    }
+
+  });
+ });
+
+</script>
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.--><script>var __adobewebfontsappname__="dreamweaver"</script><script src="http://use.edgefonts.net/lobster:n4:default;anonymous-pro:n4:default;source-sans-pro:n4:default;asap:n4:default.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+
+  <div class="site-wrapper">
+    <div class="site-wrapper-inner">
+      <div class="cover-container">
+        <div class="masthead clearfix">
+          <div class="inner">
+            <h3 class="masthead-brand">Kevin Chen</h3>
+            <nav>
+              <ul class="nav masthead-nav">
+
+                <li id="homeNavList" class="active"><a href="javascript:void(0)" class="homeNav">Home</a></li>
+                <li id="projectsNavList"><a href="javascript:void(0)" class="projectsNav">Projects</a></li>
+                <li id="contactNavList"><a href="javascript:void(0)" class="contactNav">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+        <div class="inner cover">
+          <h1 class="cover-heading homePageContent">Hello World!</h1>
+          <p class="lead homePageContent">My name is Kevin, I am a Fourth Year Software Systems student at Simon Fraser University, and a hybrid developer/designer. Talk to me and we'll see what we can make! (Insert ethos here)</p>
+          <p class="lead homePageContent">
+            <a href="javascript:void(0)" class="btn btn-lg btn-default goToProjects">Check out my projects!</a>
+          </p>
+
+          <!-- spacer -->
+
+          <h1 class="cover-heading projectsPageContent">Projects I've worked on</h1>
+          <br><br>
+           <a href="portfolio.html">
+              <div class="col-md-4 projectsPageContent">
+                <img src="images/project3.png" class="img-thumbnail imageBorder">
+                <br>
+                <p class="projectTitle"> Project Five - Portfolio</p>
+              </div>
+          </a>
+          <a href="icon.html">
+              <div class="col-md-4 projectsPageContent">
+                <img src="images/project1.png" class="img-thumbnail imageBorder">
+                <br>
+                <p class="projectTitle"> Project One - Icons </p>
+              </div>
+          </a>
+          <a href="javascript:alert('404')">
+              <div class="col-md-4 projectsPageContent">
+                <img src="images/project2.png" class="img-thumbnail imageBorder">
+                <br>
+                <p class="projectTitle"> Project Four - Magazine Design</p>
+              </div>
+			</a>
+           
+
+          <!-- spacer -->
+
+          <h1 class="cover-heading contactPageContent">Let's talk!</h1>
+<div class="col-md-6 contactPageContent">        
+  <p class="contactText"> EMAIL: </p>
+  <p class="contactText"> GITHUB: </p>
+  <p class="contactText"> LINKEDIN: </p>
+</div>
+<div class="col-md-6 contactPageContent">
+  <p class="contactText"> sca123@sfu.ca </p>
+  <p class="contactText"> https://github.com/lf52/</p>
+  <p class="contactText"> https://www.linkedin.com/profile/view?id=202389788 </p>
+  </div>
+          
+        </div>
+      </div>
+
+    </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+  </html>

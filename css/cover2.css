@@ -1,0 +1,126 @@
+html,
+body {
+  height: 100%;
+}
+body {
+	font-family: "Roboto";
+	color: #fff;
+	text-align: center;
+	text-shadow: 0 1px 3px rgba(0,0,0,.5);
+}
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+          box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+}
+.site-wrapper-inner {
+  display: table-cell;
+  background-color: #334;
+  vertical-align: top;
+}
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Padding for spacing */
+.inner {
+  padding: 30px;
+}
+
+.imageBorder {
+  border-width: 10px;
+  border: thin solid white;
+}
+
+/*
+ * Header
+ */
+.masthead-brand {
+  color: #fff;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.projectTitle {
+	font-family: asap;
+	font-style: normal;
+	font-weight: 400;
+	font-size: large;
+	border-top: medium solid #FFFFFF;
+	margin-top: 10px;
+	padding-top: 10px;
+}
+
+
+@media (min-width: 768px) {
+  .masthead-brand {
+	float: left;
+	font-family: anonymous-pro;
+	font-style: normal;
+	font-weight: 400;
+  }
+  .masthead-nav {
+    float: right;
+  }
+}
+
+
+/*
+ * Cover
+ */
+
+.cover {
+	padding: 0 20px;
+}
+.cover .btn-lg {
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+
+/*
+ * Affix and center
+ */
+
+@media (min-width: 768px) {
+  /* Pull out the header and footer */
+  .masthead {
+    position: fixed;
+    top: 0;
+  }
+  .mastfoot {
+    position: fixed;
+    bottom: 0;
+  }
+  /* Start the vertical centering */
+  .site-wrapper-inner {
+	vertical-align: middle;
+	margin-top: 23px;
+  }
+  /* Handle the widths */
+  .masthead,
+  .mastfoot,
+  .cover-container {
+	width: 100%; /* Must be percentage or pixels for horizontal alignment */
+	background-color: #333344;
+  }
+}
+
+@media (min-width: 992px) {
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 700px;
+  }
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../font/Roboto-Regular.ttf");
+}
