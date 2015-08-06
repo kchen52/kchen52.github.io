@@ -41,6 +41,9 @@ body {
 /*
  * Header
  */
+.header {
+    position: fixed;
+}
 .masthead-brand {
   color: #fff;
   margin-top: 10px;
@@ -116,7 +119,7 @@ body {
   .masthead,
   .mastfoot,
   .cover-container {
-    width: 300px;
+    width: 700px;
   }
 }
 
